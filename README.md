@@ -8,14 +8,14 @@ The repository is structured as a practical lab environment rather than a collec
 
 ```text
 .
-├── 01-Identity-Fundamentals/
-├── 02-Authentication-Methods/
-├── 03-Conditional-Access/
-├── 04-Privileged-Access/
-├── 05-Identity-Protection/
-├── 06-Identity-Governance/
-├── 07-Workload-Identities/
-└── 08-Monitoring-KQL/
+├── 01_identity_fundamentals/
+├── 02_authentication_methods/
+├── 03_conditional_access/
+├── 04_privileged_access/
+├── 05_identity_protection/
+├── 06_identity_governance/
+├── 07_workload_identities/
+└── 08_monitoring_kql/
 ```
 
 ## Focus
