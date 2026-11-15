@@ -1,0 +1,11 @@
+// Failed Entra sign-ins
+
+SigninLogs
+| where TimeGenerated > ago(24h)
+| where ResultType != 0
+| summarize
+    Failures=count(),
+    Apps=make_set(AppDisplayName, 10),
+    IPs=make_set(IPAddress, 10)
+    by UserPrincipalName
+| order by Failures desc
