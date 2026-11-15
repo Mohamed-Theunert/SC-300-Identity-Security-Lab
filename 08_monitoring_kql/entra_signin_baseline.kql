@@ -1,0 +1,11 @@
+// Entra sign-in baseline
+// Microsoft Sentinel / Log Analytics
+
+SigninLogs
+| where TimeGenerated > ago(7d)
+| summarize
+    SignIns=count(),
+    Users=dcount(UserPrincipalName),
+    IPs=dcount(IPAddress)
+    by AppDisplayName
+| order by SignIns desc
