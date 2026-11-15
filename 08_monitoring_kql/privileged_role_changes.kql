@@ -1,0 +1,12 @@
+// Privileged role changes in Entra ID
+
+AuditLogs
+| where TimeGenerated > ago(7d)
+| where OperationName has_any ("role", "eligible", "assignment")
+| project
+    TimeGenerated,
+    OperationName,
+    Result,
+    InitiatedBy,
+    TargetResources
+| order by TimeGenerated desc
